@@ -1349,3 +1349,201 @@ body.legal-page {
   display: none !important;
   content: none !important;
 }
+
+/* =========================================================
+   MOBILE — prevent horizontal overflow
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .legal-page,
+  .legal-container,
+  .legal-content,
+  .legal-header,
+  .legal-toc,
+  .legal-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .legal-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Main title */
+  .legal-header h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* Section headings */
+  .legal-section h2 {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .legal-section h3 {
+    max-width: 100%;
+    font-size: 0.94rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  /* TOC */
+  .legal-toc {
+    padding: 16px;
+  }
+
+  .legal-toc__grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .legal-toc a {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+
+  /* Cards */
+  .legal-section {
+    padding: 20px 16px;
+  }
+
+  .legal-section p,
+  .legal-section li,
+  .legal-section a,
+  .legal-section dd,
+  .legal-section dt {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — LEGAL PAGE TITLE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  .legal-card__heading {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .legal-card__heading h1 {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: clamp(2rem, 10vw, 2.65rem);
+    line-height: 1;
+    letter-spacing: .035em;
+
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+
+    text-align: center;
+  }
+
+  .datenschutz-page .legal-card__heading h1 {
+    font-size: clamp(1.7rem, 7.5vw, 2.15rem);
+    letter-spacing: .015em;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .datenschutz-page .legal-card__heading h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Datenschutz title — mobile */
+@media (max-width: 620px) {
+  .datenschutz-page .legal-card__heading h1 {
+    font-size: clamp(1.35rem, 6.3vw, 1.85rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .datenschutz-page .legal-card__heading h1 {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Datenschutz — final mobile title size */
+@media (max-width: 620px) {
+  body.datenschutz-page .legal-card__heading h1 {
+    font-size: 24px !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 380px) {
+  body.datenschutz-page .legal-card__heading h1 {
+    font-size: 22px !important;
+  }
+}
+
+/* Datenschutz responsive title */
+.datenschutz-title__mobile {
+  display: none;
+}
+
+@media (max-width: 620px) {
+
+  .datenschutz-title__desktop {
+    display: none;
+  }
+
+  .datenschutz-title__mobile {
+    display: block;
+  }
+
+  body.datenschutz-page .legal-card__heading h1.datenschutz-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 2.35rem !important;
+    line-height: 0.92 !important;
+    letter-spacing: 0.04em !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 380px) {
+  body.datenschutz-page .legal-card__heading h1.datenschutz-title {
+    font-size: 2.15rem !important;
+  }
+}
