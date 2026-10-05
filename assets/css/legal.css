@@ -1202,28 +1202,6 @@ body.legal-page {
   -webkit-backdrop-filter: blur(16px);
 }
 
-
-/* SMALL GOLD DETAIL ON EACH SECTION */
-
-.legal-section::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 24px;
-
-  width: 34px;
-  height: 2px;
-
-  background: linear-gradient(
-    90deg,
-    var(--yf-gold),
-    var(--yf-gold-soft)
-  );
-
-  border-radius: 999px;
-}
-
-
 /* SECTION TITLES */
 
 .legal-section h2,
@@ -1438,81 +1416,6 @@ body.legal-page {
     max-width: 100%;
     overflow-wrap: anywhere;
     word-break: normal;
-  }
-}
-
-
-/* =========================================================
-   MOBILE — LEGAL PAGE TITLE
-   ========================================================= */
-
-@media (max-width: 620px) {
-
-  .legal-card__heading {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .legal-card__heading h1 {
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: clamp(2rem, 10vw, 2.65rem);
-    line-height: 1;
-    letter-spacing: .035em;
-
-    white-space: normal;
-    overflow-wrap: normal;
-    word-break: normal;
-
-    text-align: center;
-  }
-
-  .datenschutz-page .legal-card__heading h1 {
-    font-size: clamp(1.7rem, 7.5vw, 2.15rem);
-    letter-spacing: .015em;
-  }
-}
-
-@media (max-width: 380px) {
-
-  .datenschutz-page .legal-card__heading h1 {
-    font-size: 1.6rem;
-  }
-}
-
-/* Datenschutz title — mobile */
-@media (max-width: 620px) {
-  .datenschutz-page .legal-card__heading h1 {
-    font-size: clamp(1.35rem, 6.3vw, 1.85rem) !important;
-    line-height: 1.05 !important;
-    letter-spacing: 0.01em !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .datenschutz-page .legal-card__heading h1 {
-    font-size: 1.3rem !important;
-  }
-}
-
-/* Datenschutz — final mobile title size */
-@media (max-width: 620px) {
-  body.datenschutz-page .legal-card__heading h1 {
-    font-size: 24px !important;
-    line-height: 1.05 !important;
-    letter-spacing: 0.02em !important;
-    white-space: nowrap !important;
-  }
-}
-
-@media (max-width: 380px) {
-  body.datenschutz-page .legal-card__heading h1 {
-    font-size: 22px !important;
   }
 }
 
