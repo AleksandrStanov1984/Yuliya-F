@@ -1,0 +1,1351 @@
+/* =========================================================
+   YULIYA FEDORKO — LEGAL PAGES
+   Modern Cream / Glass Design
+   ========================================================= */
+
+:root {
+  --legal-bg: #fffdf9;
+  --legal-bg-soft: #fbf6ed;
+
+  --legal-teal: #005b5b;
+  --legal-teal-dark: #004748;
+
+  --legal-gold: #c88a24;
+  --legal-gold-dark: #a96b10;
+
+  --legal-text: #263b3b;
+  --legal-muted: #6d7977;
+
+  --legal-border: rgba(196, 139, 44, .24);
+  --legal-border-soft: rgba(0, 91, 91, .10);
+
+  --glass:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .88),
+      rgba(255, 249, 238, .76)
+    );
+
+  --shadow:
+    0 18px 55px rgba(77, 57, 31, .075);
+
+  --shadow-hover:
+    0 22px 60px rgba(77, 57, 31, .11);
+}
+
+
+/* =========================================================
+   RESET / PAGE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body.legal-page {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  color: var(--legal-text);
+
+  background:
+    radial-gradient(
+      circle at 5% 8%,
+      rgba(199, 138, 36, .055),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 96% 25%,
+      rgba(0, 91, 91, .035),
+      transparent 32rem
+    ),
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #fffdf9 45%,
+      #fbf6ed 100%
+    );
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SMALL TOP HEADER
+   ========================================================= */
+
+.legal-header {
+  width: 100%;
+  padding: 22px 24px 0;
+}
+
+.legal-header__inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 44px;
+
+  color: var(--legal-teal);
+  text-decoration: none;
+
+  font-size: .88rem;
+  font-weight: 600;
+
+  transition:
+    color .18s ease,
+    transform .18s ease;
+}
+
+.back-link svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.back-link:hover {
+  color: var(--legal-gold);
+  transform: translateX(-3px);
+}
+
+.legal-header__brand {
+  color: var(--legal-teal-dark);
+
+  text-align: right;
+  text-transform: uppercase;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .78rem;
+  letter-spacing: .08em;
+}
+
+.legal-header__brand span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--legal-gold);
+
+  font-family: Arial, sans-serif;
+  font-size: .52rem;
+  letter-spacing: .22em;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.legal-shell {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 90px;
+}
+
+
+/*
+ * IMPORTANT:
+ * Old version used one giant glass card.
+ * Now article itself is transparent.
+ * Individual sections become glass cards.
+ */
+
+.legal-card {
+  width: 100%;
+  margin: 0;
+
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  overflow: visible;
+}
+
+.legal-card::before,
+.legal-card::after {
+  display: none;
+}
+
+
+/* =========================================================
+   HERO / PAGE TITLE
+   ========================================================= */
+
+.legal-card__heading {
+  width: min(760px, 100%);
+
+  margin: 20px auto 52px;
+
+  text-align: center;
+}
+
+.legal-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin: 0 0 18px;
+}
+
+.legal-ornament span {
+  display: block;
+
+  width: 46px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--legal-gold)
+    );
+}
+
+.legal-ornament span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      var(--legal-gold),
+      transparent
+    );
+}
+
+.legal-ornament i {
+  display: block;
+
+  width: 7px;
+  height: 7px;
+
+  border: 1px solid var(--legal-gold);
+
+  transform: rotate(45deg);
+}
+
+.legal-eyebrow {
+  margin: 0 0 15px;
+
+  color: var(--legal-gold-dark);
+
+  font-size: .67rem;
+  font-weight: 700;
+
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+.legal-card__heading h1 {
+  margin: 0;
+
+  color: var(--legal-teal-dark);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-weight: 500;
+
+  line-height: .96;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.legal-lead {
+  display: inline-block;
+
+  position: relative;
+
+  margin: 19px 0 0;
+  padding-bottom: 21px;
+
+  color: var(--legal-teal);
+
+  font-size: .7rem;
+  font-weight: 600;
+
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.legal-lead::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 90px;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--legal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   TABLE OF CONTENTS — GLASS PANEL
+   ========================================================= */
+
+.legal-toc {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+
+  width: min(1000px, 100%);
+
+  margin: 0 auto 38px;
+
+  padding: 58px 24px 24px;
+
+  background: var(--glass);
+
+  border: 1px solid var(--legal-border-soft);
+  border-radius: 25px;
+
+  box-shadow:
+    var(--shadow),
+    inset 0 1px 0 rgba(255,255,255,.96);
+
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+
+/*
+ * Visual title without changing HTML.
+ */
+
+.legal-toc::before {
+  content: "INHALTSÜBERSICHT";
+
+  position: absolute;
+
+  top: 22px;
+  left: 24px;
+
+  color: var(--legal-teal);
+
+  font-size: .67rem;
+  font-weight: 800;
+
+  letter-spacing: .16em;
+}
+
+
+/* =========================================================
+   TOC BUTTONS
+   ========================================================= */
+
+.legal-toc a {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+  min-height: 48px;
+
+  padding: 11px 42px 11px 16px;
+
+  color: var(--legal-teal-dark);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.80),
+      rgba(249,244,234,.72)
+    );
+
+  border: 1px solid rgba(199, 138, 36, .20);
+  border-radius: 13px;
+
+  text-decoration: none;
+
+  font-size: .78rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.legal-toc a::after {
+  content: "↓";
+
+  position: absolute;
+
+  top: 50%;
+  right: 15px;
+
+  transform: translateY(-50%);
+
+  color: var(--legal-gold);
+
+  font-size: .9rem;
+
+  opacity: .8;
+}
+
+.legal-toc a:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(199, 138, 36, .48);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.96),
+      rgba(255,248,234,.90)
+    );
+
+  box-shadow:
+    0 10px 28px rgba(83, 62, 33, .08);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.legal-content {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   EACH LEGAL SECTION = GLASS CARD
+   ========================================================= */
+
+.legal-section {
+  position: relative;
+
+  margin: 0 0 18px;
+
+  padding: 30px 32px 32px;
+
+  background: var(--glass);
+
+  border: 1px solid var(--legal-border-soft);
+  border-radius: 22px;
+
+  box-shadow:
+    0 13px 40px rgba(73, 55, 31, .055),
+    inset 0 1px 0 rgba(255,255,255,.92);
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  scroll-margin-top: 28px;
+
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease;
+}
+
+.legal-section:hover {
+  border-color: rgba(199, 138, 36, .25);
+
+  box-shadow:
+    var(--shadow-hover),
+    inset 0 1px 0 rgba(255,255,255,.94);
+}
+
+
+/* small gold accent */
+
+.legal-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 32px;
+
+  width: 46px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--legal-gold),
+      rgba(199,138,36,.15)
+    );
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.legal-section h2 {
+  margin: 0 0 22px;
+
+  color: var(--legal-teal-dark);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 800;
+
+  line-height: 1.35;
+
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.legal-section__body {
+  max-width: 900px;
+}
+
+.legal-section p {
+  margin: 0 0 16px;
+
+  color: var(--legal-text);
+
+  font-size: .94rem;
+  line-height: 1.75;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DATA FIELDS
+   ========================================================= */
+
+.legal-field {
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 210px)
+    minmax(0, 1fr);
+
+  gap: 18px;
+
+  padding: 8px 0;
+}
+
+.legal-field__label {
+  color: var(--legal-teal-dark);
+
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.legal-field__value {
+  min-height: 1.4em;
+
+  color: var(--legal-text);
+
+  font-size: .92rem;
+  line-height: 1.55;
+
+  overflow-wrap: anywhere;
+}
+
+
+/*
+ * Missing values remain visible as requested.
+ */
+
+.legal-field__value:empty {
+  display: block;
+
+  width: min(260px, 100%);
+  min-height: 22px;
+
+  border-bottom:
+    1px solid rgba(199, 138, 36, .25);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.legal-field a,
+.legal-contact-link {
+  color: var(--legal-gold-dark);
+
+  text-decoration-line: underline;
+  text-decoration-color: rgba(169, 107, 16, .30);
+  text-underline-offset: 3px;
+
+  transition: color .16s ease;
+}
+
+.legal-field a:hover,
+.legal-contact-link:hover {
+  color: var(--legal-teal);
+}
+
+
+/* =========================================================
+   ADDRESS
+   ========================================================= */
+
+.legal-contact-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.legal-contact-icon {
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--legal-gold-dark);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,247,230,.96),
+      rgba(249,239,220,.72)
+    );
+
+  border:
+    1px solid rgba(199,138,36,.15);
+
+  border-radius: 50%;
+}
+
+.legal-contact-icon svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.legal-contact-link {
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   ========================================================= */
+
+.legal-card__footer {
+  display: flex;
+  justify-content: center;
+
+  width: min(1000px, 100%);
+
+  margin: 34px auto 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.legal-card__footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 11px 20px;
+
+  color: var(--legal-teal);
+
+  background: rgba(255,255,255,.72);
+
+  border: 1px solid var(--legal-border);
+  border-radius: 999px;
+
+  box-shadow:
+    0 9px 30px rgba(70,52,28,.055);
+
+  text-decoration: none;
+
+  font-size: .82rem;
+  font-weight: 700;
+
+  transition:
+    color .16s ease,
+    transform .16s ease,
+    box-shadow .16s ease;
+}
+
+.legal-card__footer a:hover {
+  color: var(--legal-gold-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 34px rgba(70,52,28,.09);
+}
+
+.legal-card__footer svg {
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   UPDATED / ERROR
+   ========================================================= */
+
+.legal-updated {
+  margin-top: 28px !important;
+
+  color: var(--legal-muted) !important;
+
+  font-size: .76rem !important;
+}
+
+.legal-error {
+  padding: 25px;
+
+  color: #7c3434;
+
+  background: rgba(255,245,245,.8);
+
+  border: 1px solid rgba(160,60,60,.12);
+  border-radius: 18px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1280px) {
+
+  .legal-shell {
+    width: min(1040px, calc(100% - 44px));
+  }
+
+  .legal-toc,
+  .legal-content,
+  .legal-card__footer {
+    width: min(940px, 100%);
+  }
+}
+
+
+/* =========================================================
+   IPAD PRO / LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .legal-shell {
+    width: calc(100% - 40px);
+
+    padding-top: 34px;
+    padding-bottom: 70px;
+  }
+
+  .legal-card__heading {
+    margin-bottom: 42px;
+  }
+
+  .legal-card__heading h1 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+  }
+
+  .legal-toc {
+    padding:
+      56px 20px
+      20px;
+  }
+
+  .legal-toc::before {
+    left: 20px;
+  }
+
+  .legal-section {
+    padding:
+      28px 28px
+      30px;
+  }
+
+  .legal-section::before {
+    left: 28px;
+  }
+}
+
+
+/* =========================================================
+   IPAD MINI / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .legal-header {
+    padding:
+      18px 20px
+      0;
+  }
+
+  .legal-shell {
+    width: calc(100% - 32px);
+
+    padding:
+      28px 0
+      58px;
+  }
+
+  .legal-card__heading {
+    margin:
+      14px auto
+      36px;
+  }
+
+  .legal-toc {
+    gap: 8px;
+
+    border-radius: 21px;
+  }
+
+  .legal-toc a {
+    min-height: 46px;
+
+    font-size: .74rem;
+  }
+
+  .legal-section {
+    margin-bottom: 14px;
+
+    border-radius: 20px;
+  }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  .legal-header {
+    padding:
+      14px 14px
+      0;
+  }
+
+  .legal-header__brand {
+    display: none;
+  }
+
+  .legal-shell {
+    width: calc(100% - 20px);
+
+    padding:
+      18px 0
+      44px;
+  }
+
+  .legal-card__heading {
+    margin:
+      12px auto
+      30px;
+  }
+
+  .legal-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: .61rem;
+  }
+
+  .legal-card__heading h1 {
+    font-size:
+      clamp(
+        2.35rem,
+        13vw,
+        3.35rem
+      );
+
+    letter-spacing: .055em;
+  }
+
+  .legal-lead {
+    margin-top: 15px;
+
+    font-size: .61rem;
+  }
+
+
+  /* one column navigation */
+
+  .legal-toc {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+
+    margin-bottom: 22px;
+
+    padding:
+      52px 12px
+      12px;
+
+    border-radius: 18px;
+  }
+
+  .legal-toc::before {
+    top: 20px;
+    left: 16px;
+
+    font-size: .62rem;
+  }
+
+  .legal-toc a {
+    min-height: 45px;
+
+    padding:
+      10px 38px
+      10px 13px;
+
+    border-radius: 11px;
+
+    font-size: .73rem;
+  }
+
+
+  /* content cards */
+
+  .legal-section {
+    margin-bottom: 11px;
+
+    padding:
+      24px 18px
+      25px;
+
+    border-radius: 17px;
+  }
+
+  .legal-section::before {
+    left: 18px;
+
+    width: 38px;
+  }
+
+  .legal-section h2 {
+    margin-bottom: 18px;
+
+    font-size: 1rem;
+  }
+
+  .legal-section p {
+    font-size: .89rem;
+    line-height: 1.7;
+  }
+
+
+  /* fields stack */
+
+  .legal-field {
+    grid-template-columns: 1fr;
+
+    gap: 4px;
+
+    padding:
+      8px 0
+      11px;
+  }
+
+  .legal-field__label {
+    font-size: .8rem;
+  }
+
+  .legal-field__value {
+    font-size: .89rem;
+  }
+
+  .legal-contact-row {
+    gap: 12px;
+  }
+
+  .legal-contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .legal-shell {
+    width: calc(100% - 14px);
+  }
+
+  .legal-card__heading h1 {
+    font-size: 2.25rem;
+  }
+
+  .legal-toc {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .legal-section {
+    padding:
+      22px 15px
+      23px;
+  }
+
+  .legal-section::before {
+    left: 15px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .back-link,
+  .legal-toc a,
+  .legal-section,
+  .legal-card__footer a {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   MOBILE — COMPACT LEGAL SECTION TITLES
+   ========================================================= */
+
+@media (max-width: 620px) {
+  .legal-section h2 {
+    font-size: 0.86rem;
+    line-height: 1.28;
+    letter-spacing: 0.025em;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .legal-section h2 {
+    font-size: 0.80rem;
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+  }
+}
+
+/* =========================================================
+   YULIYA FEDORKO — BRAND COLOR SYSTEM
+   Based on hero artwork
+   ========================================================= */
+
+:root {
+  --yf-ivory: #fffaf1;
+  --yf-cream: #f8efdf;
+  --yf-cream-soft: #fcf7ed;
+
+  --yf-teal: #006c6b;
+  --yf-teal-dark: #004f50;
+  --yf-teal-soft: #dceeed;
+
+  --yf-gold: #c88b24;
+  --yf-gold-dark: #a86d12;
+  --yf-gold-soft: #ead2a4;
+
+  --yf-text: #183f3e;
+  --yf-muted: #607473;
+
+  --yf-border: rgba(190, 137, 46, 0.30);
+  --yf-glass: rgba(255, 252, 245, 0.82);
+}
+
+
+/* PAGE BACKGROUND */
+
+body.legal-page {
+  background:
+    radial-gradient(
+      circle at 15% 8%,
+      rgba(0, 126, 125, 0.055),
+      transparent 30rem
+    ),
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(201, 139, 36, 0.07),
+      transparent 32rem
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      var(--yf-ivory) 48%,
+      #ffffff 100%
+    );
+
+  color: var(--yf-text);
+}
+
+
+/* MAIN PAGE TITLE */
+
+.legal-header h1,
+.legal-hero h1,
+.legal-page h1 {
+  color: var(--yf-teal-dark);
+}
+
+.legal-header__eyebrow,
+.legal-hero__eyebrow,
+.legal-kicker {
+  color: var(--yf-gold-dark);
+}
+
+.legal-header::after,
+.legal-hero::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--yf-gold),
+    transparent
+  );
+}
+
+
+/* GLASS CARDS */
+
+.legal-toc,
+.legal-section {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.92) 0%,
+      rgba(255,250,240,.82) 55%,
+      rgba(224,244,242,.38) 100%
+    );
+
+  border: 1px solid var(--yf-border);
+
+  box-shadow:
+    0 16px 40px rgba(74, 58, 32, 0.065),
+    inset 0 1px 0 rgba(255,255,255,.95);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* SMALL GOLD DETAIL ON EACH SECTION */
+
+.legal-section::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 24px;
+
+  width: 34px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    var(--yf-gold),
+    var(--yf-gold-soft)
+  );
+
+  border-radius: 999px;
+}
+
+
+/* SECTION TITLES */
+
+.legal-section h2,
+.legal-toc__title {
+  color: var(--yf-teal-dark);
+}
+
+
+/* TEXT */
+
+.legal-section p,
+.legal-section li,
+.legal-section address {
+  color: #334c4b;
+}
+
+.legal-section strong {
+  color: var(--yf-teal-dark);
+}
+
+
+/* LINKS */
+
+.legal-page a {
+  color: var(--yf-gold-dark);
+  text-decoration-color: rgba(168, 109, 18, .35);
+  text-underline-offset: 3px;
+}
+
+.legal-page a:hover {
+  color: var(--yf-teal);
+}
+
+
+/* TABLE OF CONTENTS BUTTONS */
+
+.legal-toc a {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.88),
+      rgba(248,239,223,.68)
+    );
+
+  border: 1px solid rgba(190,137,46,.23);
+
+  color: var(--yf-teal-dark);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.legal-toc a:hover {
+  color: var(--yf-teal-dark);
+
+  border-color: rgba(190,137,46,.55);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.98),
+      rgba(220,238,237,.62)
+    );
+
+  box-shadow:
+    0 8px 22px rgba(0,79,80,.08),
+    inset 0 1px 0 rgba(255,255,255,1);
+}
+
+
+/* EMPTY / PLACEHOLDER VALUES */
+
+.legal-empty,
+[data-empty="true"] {
+  border-bottom: 1px solid rgba(200,139,36,.25);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+
+  body.legal-page {
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(0,108,107,.045),
+        transparent 18rem
+      ),
+      linear-gradient(
+        180deg,
+        #ffffff,
+        #fffaf1 45%,
+        #ffffff
+      );
+  }
+
+  .legal-toc,
+  .legal-section {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.96),
+        rgba(250,243,230,.82)
+      );
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .legal-section::before {
+    left: 16px;
+    width: 30px;
+  }
+}
+
+/* =========================================================
+   REMOVE DECORATIVE GOLD MARKS FROM LEGAL CARDS
+   ========================================================= */
+
+.legal-section::before,
+.legal-section::after {
+  display: none !important;
+  content: none !important;
+}

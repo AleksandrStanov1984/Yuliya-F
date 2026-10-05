@@ -1,0 +1,1280 @@
+/* =========================================================
+   YULIYA FEDORKO — LEGAL HOME
+   Hero image + independent content
+   ========================================================= */
+
+.legal-home {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+  color: var(--text);
+  background:
+    linear-gradient(
+      180deg,
+      #fffdfa 0%,
+      #fffaf3 48%,
+      #fbf3e7 100%
+    );
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+
+/*
+ * Soft transition from artwork into white content.
+ */
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.home-main {
+  position: relative;
+
+  width: min(1180px, calc(100% - 48px));
+
+  margin-inline: auto;
+
+  padding:
+    clamp(30px, 4vw, 60px)
+    0
+    clamp(45px, 6vw, 80px);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  text-align: center;
+}
+
+.intro__ornament {
+  display: flex;
+
+  width: clamp(90px, 10vw, 130px);
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin:
+    0
+    auto
+    clamp(15px, 2vw, 24px);
+}
+
+.intro__ornament span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--gold)
+    );
+}
+
+.intro__ornament span:last-child {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      var(--gold)
+    );
+}
+
+.intro__ornament i {
+  width: 7px;
+  height: 7px;
+
+  transform: rotate(45deg);
+
+  border: 1px solid var(--gold);
+}
+
+.intro h1 {
+  margin: 0;
+
+  color: var(--teal);
+
+  font-family: var(--serif);
+
+  font-size: clamp(34px, 4.4vw, 60px);
+  font-weight: 400;
+  line-height: .98;
+
+  letter-spacing: .06em;
+
+  text-transform: uppercase;
+}
+
+.intro p {
+  max-width: 620px;
+
+  margin:
+    clamp(18px, 2vw, 25px)
+    auto
+    0;
+
+  color: #34595a;
+
+  font-size: clamp(14px, 1.35vw, 18px);
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.legal-navigation {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(20px, 2.5vw, 30px);
+
+  margin-top: clamp(34px, 4vw, 55px);
+}
+
+.legal-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    clamp(65px, 6vw, 82px)
+    minmax(0, 1fr)
+    clamp(45px, 4.5vw, 58px);
+
+  align-items: center;
+
+  min-height: 138px;
+
+  gap: clamp(12px, 1.5vw, 20px);
+
+  padding:
+    clamp(20px, 2vw, 27px)
+    clamp(20px, 2.3vw, 31px);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(190, 125, 21, .65);
+  border-radius: 22px;
+
+  color: inherit;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, .84),
+      rgba(255, 250, 240, .68)
+    );
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 45px rgba(74, 52, 26, .09),
+    inset 0 1px 0 rgba(255, 255, 255, .92);
+
+  text-decoration: none;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.legal-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -110px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(10, 126, 124, .10),
+      rgba(197, 132, 25, .04) 45%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.legal-card__icon {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  width: clamp(62px, 5.5vw, 76px);
+  aspect-ratio: 1;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(248, 235, 213, .78);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+.legal-card__icon svg {
+  width: 53%;
+  height: 53%;
+
+  fill: none;
+
+  stroke: #b1730d;
+  stroke-width: 1.65;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.legal-card__content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+}
+
+.legal-card__content strong {
+  color: var(--teal);
+
+  font-family: var(--serif);
+
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 400;
+  line-height: 1.05;
+
+  text-transform: uppercase;
+
+  overflow-wrap: anywhere;
+}
+
+.legal-card__content small {
+  margin-top: 8px;
+
+  color: #234b4c;
+
+  font-size: clamp(12px, 1.05vw, 15px);
+  line-height: 1.35;
+}
+
+.legal-card__arrow {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  width: clamp(44px, 4vw, 56px);
+  aspect-ratio: 1;
+
+  place-items: center;
+
+  justify-self: end;
+
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+
+  background: rgba(255, 253, 248, .65);
+}
+
+.legal-card__arrow svg {
+  width: 50%;
+  height: 50%;
+
+  fill: none;
+
+  stroke: var(--gold);
+  stroke-width: 1.6;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.contact-footer {
+  margin-top: clamp(40px, 5vw, 65px);
+}
+
+.footer-divider {
+  display: grid;
+
+  grid-template-columns:
+    minmax(50px, 1fr)
+    28px
+    minmax(50px, 1fr);
+
+  align-items: center;
+
+  gap: 15px;
+
+  width: min(520px, 75%);
+
+  margin:
+    0
+    auto
+    clamp(25px, 3vw, 34px);
+}
+
+.footer-divider span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(25, 86, 84, .6)
+    );
+}
+
+.footer-divider span:last-child {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      rgba(25, 86, 84, .6)
+    );
+}
+
+.footer-divider svg {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--teal);
+}
+
+.contact-list {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(15px, 2vw, 27px);
+}
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #21494a;
+
+  font-size: clamp(12px, 1.05vw, 14px);
+  line-height: 1.35;
+
+  text-decoration: none;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+.contact-item__icon {
+  flex: 0 0 auto;
+}
+
+.contact-item__icon svg {
+  display: block;
+
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+
+  stroke: var(--gold);
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-separator {
+  width: 1px;
+  height: 33px;
+
+  flex: 0 0 auto;
+
+  background: rgba(184, 120, 18, .5);
+}
+
+.address-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(45px, 90px)
+    minmax(0, auto)
+    minmax(45px, 90px);
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-top: clamp(30px, 4vw, 45px);
+}
+
+.copyright-row > span {
+  height: 1px;
+
+  background: rgba(184, 120, 18, .55);
+}
+
+.copyright-row p {
+  margin: 0;
+
+  color: #687676;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   INTERACTION
+   ========================================================= */
+
+@media (hover: hover) {
+  .legal-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+      0 24px 50px rgba(74, 52, 26, .14),
+      inset 0 1px 0 rgba(255, 255, 255, .95);
+  }
+
+  .legal-card:hover .legal-card__arrow {
+    transform: translateX(3px);
+  }
+
+  .contact-item:hover {
+    color: var(--gold);
+
+    transform: translateY(-2px);
+  }
+}
+
+.legal-card:focus-visible,
+.contact-item:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .home-main {
+    width: min(1040px, calc(100% - 48px));
+  }
+
+  .legal-card {
+    min-height: 126px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .home-main {
+    width: min(760px, calc(100% - 36px));
+
+    padding-top: 32px;
+  }
+
+  .legal-navigation {
+    grid-template-columns: 1fr;
+
+    max-width: 720px;
+
+    margin-inline: auto;
+  }
+
+  .legal-card {
+    min-height: 125px;
+  }
+
+  .contact-list {
+    flex-wrap: wrap;
+
+    row-gap: 18px;
+  }
+
+  #contact-address {
+    flex-basis: 100%;
+
+    justify-content: center;
+  }
+
+  .contact-list .contact-separator:last-of-type {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .home-main {
+    width: calc(100% - 24px);
+
+    padding-top: 25px;
+    padding-bottom: 42px;
+  }
+
+  
+
+  .intro h1 {
+    font-size: clamp(29px, 9vw, 40px);
+  }
+
+  .intro p {
+    max-width: 340px;
+
+    font-size: 13px;
+  }
+
+  .legal-navigation {
+    gap: 15px;
+
+    margin-top: 30px;
+  }
+
+  .legal-card {
+    grid-template-columns:
+      clamp(48px, 14vw, 58px)
+      minmax(0, 1fr)
+      36px;
+
+    gap: 10px;
+
+    min-height: 108px;
+
+    padding: 14px 13px;
+
+    border-radius: 17px;
+  }
+
+  .legal-card__icon {
+    width: clamp(46px, 13vw, 54px);
+  }
+
+  .legal-card__content strong {
+    font-size: clamp(17px, 5vw, 22px);
+  }
+
+  .legal-card__content small {
+    margin-top: 5px;
+
+    font-size: 10px;
+  }
+
+  .legal-card__arrow {
+    width: 34px;
+  }
+
+  .contact-footer {
+    margin-top: 35px;
+  }
+
+  .footer-divider {
+    width: 82%;
+
+    margin-bottom: 24px;
+  }
+
+  .contact-list {
+    display: grid;
+
+    gap: 14px;
+
+    justify-items: center;
+  }
+
+  .contact-separator {
+    display: none;
+  }
+
+  #contact-address {
+    justify-content: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+
+    font-size: 12px;
+
+    text-align: center;
+  }
+
+  .copyright-row {
+    grid-template-columns:
+      minmax(25px, 60px)
+      minmax(0, auto)
+      minmax(25px, 60px);
+
+    gap: 10px;
+
+    margin-top: 30px;
+  }
+
+  .copyright-row p {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .home-main {
+    width: calc(100% - 18px);
+  }
+
+  .intro h1 {
+    font-size: 27px;
+  }
+
+  .legal-card {
+    grid-template-columns:
+      44px
+      minmax(0, 1fr)
+      31px;
+
+    padding-inline: 10px;
+  }
+
+  .legal-card__icon {
+    width: 42px;
+  }
+
+  .legal-card__content strong {
+    font-size: 16px;
+  }
+
+  .legal-card__arrow {
+    width: 30px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   HERO FINAL SIZING
+   ========================================================= */
+
+/* Laptop + Desktop */
+@media (min-width: 1025px) {
+  
+
+  
+
+  
+}
+
+/* Large desktop */
+@media (min-width: 1600px) {
+  
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  
+
+  
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  
+
+  
+}
+
+/* =========================================================
+   HERO — FINAL NORMAL RESPONSIVE VERSION
+   Full image. No crop. No cover. No fixed height.
+   ========================================================= */
+
+
+/* ---------- LAPTOP / DESKTOP ---------- */
+
+@media (min-width: 1025px) {
+  
+
+  
+
+  
+}
+
+
+/* ---------- LARGE DESKTOP ---------- */
+
+@media (min-width: 1600px) {
+  
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .brand-hero picture,
+  
+}
+
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 600px) {
+  .brand-hero picture,
+  
+}
+
+/* =========================================================
+   HERO — FULL WIDTH, NATURAL ASPECT RATIO
+   ========================================================= */
+
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .brand-hero,
+  .brand-hero picture,
+  
+}
+
+/* Tablet + phone */
+@media (max-width: 1024px) {
+  .brand-hero,
+  .brand-hero picture,
+  
+}
+
+
+/* ===== FINAL SINGLE IMAGE HERO ===== */
+
+/*
+ * ONE artwork for every viewport:
+ * assets/images/background-desktop.webp
+ *
+ * No crop.
+ * No cover.
+ * No fixed hero height.
+ */
+
+
+/* Desktop / large laptop */
+@media (min-width: 1280px) {
+  .brand-hero,
+  
+}
+
+/* iPad Pro / tablets / small laptops */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .brand-hero,
+  
+}
+
+/* Phones */
+@media (max-width: 767px) {
+  
+
+  
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .brand-hero,
+  
+}
+
+/* =========================================================
+   HERO — FINAL
+   One image for ALL devices
+   ========================================================= */
+
+.brand-hero {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #fbf3e6;
+  line-height: 0;
+}
+
+.brand-hero__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+}
+
+/* soft transition into content */
+.brand-hero::after {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: clamp(10px, 2.2vw, 36px);
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 253, 250, 0),
+    #fffdfa
+  );
+}
+
+
+/* =========================
+   LARGE DESKTOP
+   ========================= */
+
+@media (min-width: 1600px) {
+  .brand-hero__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* =========================
+   LAPTOP / DESKTOP
+   ========================= */
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .brand-hero__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* =========================
+   TABLETS
+   iPad Mini / Air / Pro
+   ========================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .brand-hero__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* =========================
+   PHONES
+   ========================= */
+
+@media (max-width: 600px) {
+  .brand-hero {
+    width: 100%;
+  }
+
+  .brand-hero__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE HERO — SAME IMAGE, LARGER VISUAL CROP
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .brand-hero {
+    width: 100%;
+    height: clamp(155px, 44vw, 185px);
+    overflow: hidden;
+    background: #fbf2e5;
+  }
+
+  .brand-hero__image {
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: initial;
+  }
+
+  .brand-hero::after {
+    height: 18px;
+  }
+}
+
+/* Small phones: 320–380px */
+@media (max-width: 380px) {
+  .brand-hero {
+    height: 150px;
+  }
+}
+
+/* Large phones */
+@media (min-width: 430px) and (max-width: 600px) {
+  .brand-hero {
+    height: 185px;
+  }
+}
+
+/* ===== MOBILE HERO — 2X LARGER ===== */
+
+@media (max-width: 600px) {
+  .brand-hero {
+    height: clamp(290px, 82vw, 350px);
+  }
+
+  .brand-hero__image {
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-hero {
+    height: 285px;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 600px) {
+  .brand-hero {
+    height: 350px;
+  }
+}
+
+
+/* ===== RESPONSIVE HERO FINAL ===== */
+
+/*
+ * Same artwork on every device.
+ *
+ * Desktop: full banner.
+ * Tablet: controlled crop.
+ * Phone: zoomed enough to be a real hero,
+ *        but wide enough to keep logo + butterflies visible.
+ */
+
+
+/* ---------------------------------------------------------
+   DESKTOP / LAPTOP
+   1025px+
+   --------------------------------------------------------- */
+
+@media (min-width: 1025px) {
+
+  .brand-hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .brand-hero__image {
+    position: static;
+
+    display: block;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    transform: none;
+
+    object-fit: initial;
+    object-position: center;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   TABLET LANDSCAPE / iPad Pro
+   900–1024px
+   --------------------------------------------------------- */
+
+@media (min-width: 900px) and (max-width: 1024px) {
+
+  .brand-hero {
+    height: 260px;
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: initial;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   TABLET PORTRAIT
+   iPad Mini / iPad Air
+   601–899px
+   --------------------------------------------------------- */
+
+@media (min-width: 601px) and (max-width: 899px) {
+
+  .brand-hero {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: initial;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   LARGE PHONES
+   431–600px
+   --------------------------------------------------------- */
+
+@media (min-width: 431px) and (max-width: 600px) {
+
+  .brand-hero {
+    height: 270px;
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: initial;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   NORMAL PHONES
+   iPhone XR / 12 / 13 / 14 / 15 etc.
+   381–430px
+   --------------------------------------------------------- */
+
+@media (min-width: 381px) and (max-width: 430px) {
+
+  .brand-hero {
+    height: 245px;
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: initial;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   SMALL PHONES
+   320–380px
+   --------------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+  .brand-hero {
+    height: 225px;
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    object-fit: initial;
+  }
+}
+
+
+/* Transition into main content */
+.brand-hero::after {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 18px;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 253, 250, 0),
+    #fffdfa
+  );
+}
+
+
+/* =========================================================
+   TABLET HERO — LARGER
+   Phones and desktop are NOT affected
+   ========================================================= */
+
+/* iPad Mini / Air — portrait */
+@media (min-width: 601px) and (max-width: 899px) {
+  .brand-hero {
+    height: clamp(330px, 43vw, 390px);
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+    left: 50%;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    transform: translateX(-50%);
+    object-fit: initial;
+  }
+}
+
+/* iPad / iPad Pro / large tablets */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .brand-hero {
+    height: clamp(350px, 39vw, 410px);
+    overflow: hidden;
+  }
+
+  .brand-hero__image {
+    position: relative;
+    left: 50%;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    transform: translateX(-50%);
+    object-fit: initial;
+  }
+}

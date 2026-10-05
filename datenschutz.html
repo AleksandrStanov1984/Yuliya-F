@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+
+  <title>Datenschutzerklärung | Yuliya Fedorko Kosmetik Studio</title>
+  <meta
+    name="description"
+    content="Datenschutzerklärung von Yuliya Fedorko Kosmetik Studio in Villingen-Schwenningen."
+  >
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/legal.css">
+</head>
+
+<body class="legal-page">
+
+  <header class="legal-header">
+    <div class="legal-header__inner">
+
+      <a
+        class="back-link"
+        href="index.html"
+        aria-label="Zurück zu den rechtlichen Informationen"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+
+        <span>Zurück</span>
+      </a>
+
+      <div class="legal-header__brand">
+        Yuliya Fedorko
+        <span>Kosmetik Studio</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="legal-shell">
+
+    <article class="legal-card">
+
+      <header class="legal-card__heading">
+
+        <div class="legal-ornament" aria-hidden="true">
+          <span></span>
+          <i></i>
+          <span></span>
+        </div>
+
+        <p class="legal-eyebrow">
+          Rechtliche Informationen
+        </p>
+
+        <h1>Datenschutz</h1>
+
+        <p class="legal-lead">
+          Datenschutzerklärung
+        </p>
+
+      </header>
+
+
+      <nav
+        class="legal-toc"
+        id="legal-toc"
+        aria-label="Inhaltsverzeichnis"
+      ></nav>
+
+
+      <div
+        id="legal-content"
+        class="legal-content"
+        aria-live="polite"
+      >
+        <noscript>
+          Für die Anzeige der Datenschutzerklärung muss JavaScript aktiviert sein.
+        </noscript>
+      </div>
+
+
+      <footer class="legal-card__footer">
+        <a href="index.html">
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+
+          Zurück zur Übersicht
+
+        </a>
+      </footer>
+
+    </article>
+
+  </main>
+
+
+  <script>
+    Promise.all([
+      fetch('data/business.json').then(response => {
+        if (!response.ok) {
+          throw new Error('business.json konnte nicht geladen werden.');
+        }
+
+        return response.json();
+      }),
+
+      fetch('data/datenschutz.json').then(response => {
+        if (!response.ok) {
+          throw new Error('datenschutz.json konnte nicht geladen werden.');
+        }
+
+        return response.json();
+      })
+    ])
+    .then(([business, legal]) => {
+
+      const toc = document.getElementById('legal-toc');
+      const content = document.getElementById('legal-content');
+
+      const esc = value => String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+
+
+      const businessBlock = () => `
+        <div class="legal-business">
+
+          <p>
+            <strong>${esc(business.studio)}</strong><br>
+            ${esc(business.owner)}<br>
+            ${esc(business.street)}<br>
+            ${esc(business.postalCode)} ${esc(business.city)}<br>
+            ${esc(business.country)}
+          </p>
+
+          <p>
+            ${
+              business.phone
+                ? `<strong>Telefon:</strong>
+                   <a href="tel:${esc(business.phone.replace(/\s+/g, ''))}">
+                     ${esc(business.phone)}
+                   </a><br>`
+                : ''
+            }
+
+            ${
+              business.email
+                ? `<strong>E-Mail:</strong>
+                   <a href="mailto:${esc(business.email)}">
+                     ${esc(business.email)}
+                   </a>`
+                : ''
+            }
+          </p>
+
+        </div>
+      `;
+
+
+      (legal.sections || []).forEach(section => {
+
+        /* =========================================
+           TOC
+           ========================================= */
+
+        const link = document.createElement('a');
+
+        link.href = `#${section.id}`;
+
+        link.innerHTML = `
+          <span>${esc(section.title)}</span>
+        `;
+
+        toc.appendChild(link);
+
+
+        /* =========================================
+           CONTENT CARD
+           ========================================= */
+
+        const card = document.createElement('section');
+
+        card.className = 'legal-section';
+        card.id = section.id;
+
+        let html = `<h2>${esc(section.title)}</h2>`;
+
+
+        (section.content || []).forEach(block => {
+
+          if (block.heading) {
+            html += `<h3>${esc(block.heading)}</h3>`;
+          }
+
+
+          if (block.businessData) {
+            html += businessBlock();
+          }
+
+
+          (block.paragraphs || []).forEach(paragraph => {
+            html += `<p>${esc(paragraph)}</p>`;
+          });
+
+
+          if (block.items?.length) {
+
+            html += '<ul>';
+
+            block.items.forEach(item => {
+              html += `<li>${esc(item)}</li>`;
+            });
+
+            html += '</ul>';
+          }
+
+        });
+
+
+        card.innerHTML = html;
+
+        content.appendChild(card);
+      });
+
+    })
+    .catch(error => {
+
+      console.error(error);
+
+      document.getElementById('legal-content').innerHTML = `
+        <section class="legal-section">
+          <h2>Datenschutzerklärung</h2>
+          <p>
+            Die Inhalte konnten nicht geladen werden.
+          </p>
+        </section>
+      `;
+
+    });
+  </script>
+
+</body>
+</html>
