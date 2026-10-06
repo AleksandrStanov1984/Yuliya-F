@@ -18,17 +18,6 @@
     );
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-
-/*
- * Soft transition from artwork into white content.
- */
-
-
 /* =========================================================
    MAIN
    ========================================================= */
@@ -753,7 +742,6 @@
   object-fit: contain;
 }
 
-/* soft transition into content */
 .brand-hero::after {
   content: "";
 
@@ -827,18 +815,6 @@
     height: auto;
   }
 }
-
-/* ===== RESPONSIVE HERO FINAL ===== */
-
-/*
- * Same artwork on every device.
- *
- * Desktop: full banner.
- * Tablet: controlled crop.
- * Phone: zoomed enough to be a real hero,
- *        but wide enough to keep logo + butterflies visible.
- */
-
 
 /* ---------------------------------------------------------
    DESKTOP / LAPTOP
@@ -1008,8 +984,6 @@
   }
 }
 
-
-/* Transition into main content */
 .brand-hero::after {
   content: "";
 
@@ -1037,7 +1011,6 @@
    Phones and desktop are NOT affected
    ========================================================= */
 
-/* iPad Mini / Air — portrait */
 @media (min-width: 601px) and (max-width: 899px) {
   .brand-hero {
     height: clamp(330px, 43vw, 390px);
@@ -1057,7 +1030,6 @@
   }
 }
 
-/* iPad / iPad Pro / large tablets */
 @media (min-width: 900px) and (max-width: 1024px) {
   .brand-hero {
     height: clamp(350px, 39vw, 410px);
