@@ -1,0 +1,39 @@
+{
+  "siteUrl": "https://yf-kosmetikstudio.com",
+  "siteName": "Yuliya Fedorko Kosmetik Studio",
+  "locale": "de_DE",
+  "language": "de",
+  "defaultOgImage": "assets/images/og-cover.webp",
+  "pages": {
+    "index.html": {
+      "path": "/",
+      "title": "Rechtliche Informationen | Yuliya Fedorko Kosmetik Studio",
+      "description": "Impressum und Datenschutzerklärung von Yuliya Fedorko Kosmetik Studio.",
+      "index": true
+    },
+    "impressum.html": {
+      "path": "/impressum.html",
+      "title": "Impressum | Yuliya Fedorko Kosmetik Studio",
+      "description": "Impressum und rechtliche Angaben des Yuliya Fedorko Kosmetik Studios.",
+      "index": true
+    },
+    "datenschutz.html": {
+      "path": "/datenschutz.html",
+      "title": "Datenschutzerklärung | Yuliya Fedorko Kosmetik Studio",
+      "description": "Datenschutzerklärung von Yuliya Fedorko Kosmetik Studio in Villingen-Schwenningen.",
+      "index": true
+    },
+    "404.html": {
+      "path": "/404.html",
+      "title": "Seite nicht gefunden | Yuliya Fedorko Kosmetik Studio",
+      "description": "",
+      "index": false
+    }
+  },
+  "favicon": {
+    "ico": "assets/images/favicon.ico",
+    "png16": "assets/images/favicon-16x16.png",
+    "png32": "assets/images/favicon-32x32.png",
+    "appleTouch": "assets/images/apple-touch-icon.png"
+  }
+}

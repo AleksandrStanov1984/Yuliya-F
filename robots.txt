@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yf-kosmetikstudio.com/sitemap.xml
